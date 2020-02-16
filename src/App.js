@@ -6,6 +6,7 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 
 import reducers from './combineReducers';
 import Car from "./components/Car";
+import Truck from "./components/Truck";
 
 const store = createStore(
     reducers,
@@ -18,6 +19,8 @@ class App extends Component {
         <Provider store={store}>
             <div className={"App"}>redux-demo</div>
             <Car/>
+            <hr/>
+            <Truck/>
         </Provider>
     )
   }

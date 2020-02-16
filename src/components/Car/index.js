@@ -5,16 +5,16 @@ import { driveCar, parkCar, washCar } from "./actions";
 
 const MILES_DRIVEN = 50;
 
-const Car = ({driveCar, parkCar, washCar, miles, driving, clean}) => (
+const Car = ({ driveCar, parkCar, washCar, miles, driving, clean }) => (
     <div>
         <h3>Car</h3>
-        <div>Miles: { miles ? miles : '0' }</div>
-        <div>Driving: { driving ? 'true' : 'false'}</div>
-        <div>Clean: { clean ? 'true' : 'false'}</div>
+        <div>Miles: { miles ? miles : 0 }</div>
+        <div>Driving: { driving ? 'true' : 'false' }</div>
+        <div>Clean: { clean ? 'true' : 'false' }</div>
 
-        <button onClick={() => driveCar(MILES_DRIVEN)}>Drive</button>
-        <button onClick={parkCar}>Park</button>
-        <button onClick={washCar}>Wash</button>
+        <button onClick={ () => driveCar(MILES_DRIVEN) }>Drive</button>
+        <button onClick={ parkCar }>Park</button>
+        <button onClick={ washCar }>Wash</button>
     </div>
 );
 
