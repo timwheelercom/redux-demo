@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { driveCar, parkCar, washCar } from "./actions";
 
+const MILES_DRIVEN = 50;
+
 const Car = ({driveCar, parkCar, washCar, miles, driving, clean}) => (
     <div>
         <h3>Car</h3>
@@ -10,7 +12,7 @@ const Car = ({driveCar, parkCar, washCar, miles, driving, clean}) => (
         <div>Driving: { driving ? 'true' : 'false'}</div>
         <div>Clean: { clean ? 'true' : 'false'}</div>
 
-        <button onClick={driveCar}>Drive</button>
+        <button onClick={() => driveCar(MILES_DRIVEN)}>Drive</button>
         <button onClick={parkCar}>Park</button>
         <button onClick={washCar}>Wash</button>
     </div>
